@@ -1,0 +1,92 @@
+{
+  "name": "codeception-next4",
+  "displayName": "Codeception Next4",
+  "description": "Generates unit tests for systems in Yii2 and Laravel using OpenAI",
+  "version": "0.0.1",
+  "publisher": "andreluizpereira",
+  "icon": "gifs/logo.png",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Testing"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codeception-next4.analisepath",
+        "title": "Codeception Next4: Analyze system settings"
+      },
+      {
+        "command": "codeception-next4.generateTestFromSelection",
+        "title": "Codeception Next4: Generate Test From Selection"
+      },
+      {
+        "command": "codeception-next4.generateTestByTabActive",
+        "title": "Codeception Next4: Generate complete test for active tab"
+      },
+      {
+        "command": "codeception-next4.generateTestByAllTabs",
+        "title": "Codeception Next4: Generate complete test for all tabs"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "codeception-next4.generateTestFromSelection",
+          "when": "editorHasSelection",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Codeception Next4",
+      "properties": {
+        "codeceptionNext4.pathTest": {
+          "type": "string",
+          "default": "tests/unit/",
+          "description": "Path to the unit test folder"
+        },
+        "codeceptionNext4.system": {
+          "type": "string",
+          "enum": [
+            "yii2",
+            "laravel",
+            "others"
+          ],
+          "default": "yii2",
+          "description": "Select the framework used in the test system"
+        },
+        "codeceptionNext4.chaveOpenIA": {
+          "type": "string",
+          "default": "",
+          "description": "Enter the OpenAI Key"
+        },
+        "codeceptionNext4.modelOpenIA": {
+          "type": "string",
+          "default": "gpt-4o-mini",
+          "description": "Enter the OpenAI Model"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.100.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.25.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/androidealp/codeception-next4.git"
+  }
+}
