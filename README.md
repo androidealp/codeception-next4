@@ -1,6 +1,5 @@
 <p align="center">
-   <img src="gifs/logo.png" alt="VS Code Logo" width="100" height="100" /><br/>
-   <strong>CODECEPTION NEXT4</strong>
+   <strong>CODECEPTION NEXT4 0.0.2</strong>
 </p>
 
 Generates automated unit tests via VSCode for Yii2 and Laravel so far. It can be applied to other PHP frameworks, but this has not been tested.

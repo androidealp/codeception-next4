@@ -2,7 +2,7 @@
   "name": "codeception-next4",
   "displayName": "Codeception Next4",
   "description": "Generates unit tests for systems in Yii2 and Laravel using OpenAI",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "andreluizpereira",
   "icon": "gifs/logo.png",
   "engines": {
